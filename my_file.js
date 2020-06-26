@@ -1,6 +1,18 @@
-$('li:lt(3)').hide().fadeIn(1500);
-$(':header').css('background-color','#cfa');
-$(':header').addClass('background-color','#cfa');
-$('li').on('click',function(){
-    $(this).remove();
-});
+// $('li:lt(3)').hide().fadeIn(1500);
+// $(':header').addClass('headline');
+// $('li').on('click',function(){
+//     $(this).remove();
+// });
+var count = 0;
+
+window.onload = function() {
+    var button = document.getElementById("clickme");
+    button.onclick = handleClick;
+};
+
+function handleClick() {
+    var message = "You clicked me ";
+    var div = document.getElementById("message");
+    count++;
+    div.innerHTML = message + count + " times!";
+}
