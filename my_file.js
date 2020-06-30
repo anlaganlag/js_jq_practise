@@ -3,16 +3,15 @@
 // $('li').on('click',function(){
 //     $(this).remove();
 // });
-var count = 0;
 
 window.onload = function() {
-    var button = document.getElementById("clickme");
-    button.onclick = handleClick;
-};
-
-function handleClick() {
-    var message = "You clicked me ";
+    var count = 0;
+    var message = "You clicked me  from cloused func ";
     var div = document.getElementById("message");
-    count++;
-    div.innerHTML = message + count + " times!";
-}
+
+    var button = document.getElementById("clickme");
+    button.onclick = function(){
+        count ++;
+        div.innerHTML = message + count + " times!";
+    };
+};
